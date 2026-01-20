@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표 관련 태그</title>
+</head>
+
+<body>
+    <!--
+        표 : 문서에서 다량의 데이터를 정리해서 표현하고자 할 때 사용.
+             행과 열로 이루어져 있다.
+        표를 구성하는 태그는 <table>, <tr>, <th>, <td>, 
+                                 <thead>, <tbody>, <tfoot>
+        
+        <tabel> : 표를 생성해주는 역할 태그
+        <tr> : 표의 한 행을 나타내는 태그
+        <th> : 표의 제목 셀을 나타내는 태그
+        <td> : 표의 일반 셀을 나타내는 태그
+
+        <thead> : 
+    -->
+
+    <h1>4행 3열 표 만들기</h1>
+
+    <!--border : 표의 테두리 두께-->
+    <table border="1">
+        <!--테이블에 제목 추가[Caption]-->
+        <caption>
+            웹 브라우저의 종류
+        </caption>
+        <tbody>
+            <tr>
+                <td>Chrome</td>
+                <td>Google</td>
+                <td>Http://google.com</td>
+            </tr>
+            <tr>
+                <td>Brave</td>
+                <td>??</td>
+                <td>brave.com</td>
+            </tr>
+
+            <tr>
+                <td>FireFox</td>
+                <td>Mozila</td>
+                <td>Mozila.org</td>
+            </tr>
+
+        </tbody>
+        <!--브라우저가 해석할 때 thead -> tbody 순으로 해석하기 때문에
+       -->
+        <thead>
+            <tr> <!--BOLD, 가운데 정렬-->
+                <th width="130" height="30">브라우저명</th>
+                <th width="80">제조사</th>
+                <th width="200">홈페이지</th>
+            </tr>
+
+        </thead>
+    </table>
+
+    <hr>
+    <h1>표의 행과 열을 합치는 속성</h1>
+    <!--
+        셀(th,td)태그와 속성을 이용해서 행 또는 열을 병합할 수 있다.
+        colspan = "2" : 2개의 열 병합
+        rowspan = "2" : 2개의 행 병합
+    -->
+
+    <h3>이력서</h3>
+
+    <table border="1">
+
+        <thead>
+            <tr>
+                <th colspan="2" rowspan="2" width="130" height="130">사진</th>
+
+                <th width="80">이름</th>
+                <th width="200"></th>
+            </tr>
+            <tr>
+                <td>연락처</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td width="65" height="50">주소</td>
+                <td colspan="3">
+
+                </td>
+            </tr>
+            <tr>
+                <td width="65" height="230">자기소개</td>
+                <td colspan="3">
+
+                </td>
+            </tr>
+        </thead>
+
+
+
+
+    </table>
+    <br><br><br><br>
+
+    <hr>
+    <br>
+
+
+    <table border="1">
+
+        <caption>
+            <h3><b>학생 성적표</b></h3>
+        </caption>
+        <thead>
+            <tr>
+                <th rowspan="2" width="90" height="60">번호</th>
+                <th rowspan="2" width="110" height="60">이름</th>
+                <th colspan="3" width="300" height="30">과목</th>
+                <th rowspan="2" width="90" height="60">총점</th>
+                <th rowspan="2" width="110" height="60">평균</th>
+            </tr>
+            <tr>
+                <th width="100 ">국어</th>
+                <th width="100 ">영어</th>
+                <th width="100 ">수학</th>
+            </tr>
+
+        </thead>
+
+        
+        <tbody>
+            <tr>
+                <td align="center"rowspan="2">1</td>
+                <td align="center" rowspan="2">임세윤</td>
+                <td align="center">85</td>
+                <td align="center">90</td>
+                <td align="center">88</td>
+                <td align="center" rowspan="2">263</td>
+                <td align="center" rowspan="2">87.67</td>
+            </tr>
+            <tr>
+                <td align="center" colspan="3"> 특별활동: 축구부</td>
+            </tr>
+            <tr>
+                <td align="center" >2</td>
+                <td align="center" >조용우</td>
+                <td align="center" >78</td>
+                <td align="center" >85</td>
+                <td align="center" >80</td>
+                <td align="center" >243</td>
+                <td align="center" >81</td>
+            </tr>
+            <tr>
+                <td align="center" >3</td>
+                <td align="center" >김지수</td>
+                <td align="center" >92</td>
+                <td align="center" >88</td>
+                <td align="center" >95</td>
+                <td align="center" >275</td>
+                <td align="center" >91.67</td>
+            </tr>
+            <tr>
+                <td align="center" colspan="5">전체 학생 수</td>
+                <td align="center" colspan="2"> 3명 </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br>
+</body>
+
+</html>
