@@ -1,0 +1,10 @@
+/*
+    CSS 작성 영역
+*/
+
+p, pre{  
+    /* p태그와 pre태그에 부여할 속성 */
+
+    color: darkgrey;
+
+}
