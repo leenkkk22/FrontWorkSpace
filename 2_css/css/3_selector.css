@@ -1,0 +1,77 @@
+/* 일반 구조 선택자 */
+/* :first-child : 형제관계의 요소 중 첫번째 요소를 선택 */
+
+#test1 > p:first-child{
+    background-color: red;
+    color: white;
+}
+
+/* :last-child : 형제관계의 요소 중 마지막 요소를 선택 */
+
+#test1>pre:last-child{ /*pre태그가 없어도 되지만 명시도 향상을 위해 추가하는 거*/
+    background-color: orange;
+}
+
+
+/* nth-child(수열) : 형제관계의 요소 중 지정된 수열번째 요소를 모두 선택하는 선택자 */
+
+#test1 > p:nth-child(3){ /*순서를 명시하지만 p태그까지 추가하면 명시도 추가 상승*/
+    background-color: yellow ;
+}
+
+/* 홀수번째 p 태그 요소 선택*/
+#test1 > p:nth-child(2n -1){
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#test1 > p:nth-child(even){
+    border: 1px solid black;
+}
+
+/* :nth-last-child(수열) 
+    형제관계 요소 중 "뒤에서부터" 지정된 수열번째 요소를 선택
+*/
+#test1 > p:nth-last-child(2){
+    color: blue;
+}
+
+/* 2. 형태 구조 선택자 */
+/* :first-of-type : "같이 선택된 형제요소들" 중 첫번째 요소 */
+/* 내가 원하는 타입을 명시하지 않으면, 모든 요소의 첫번째 요소들에 스타일이 적용 되는 경우가 발생할 수 있다. */
+#test2 p:first-of-type{
+    background-color: orange;
+}
+
+#test2 pre:first-of-type{
+    background-color: burlywood;
+}
+
+/* :last-of-type : "같이 선택된 형제요소들" 중 마지막 요소*/
+#test2 >p:last-of-type {
+    background-color: brown;
+}
+
+
+/* :nth-of-type */
+#test2 > p:nth-of-type(2n){
+    font-size: larger;
+}
+
+
+/* :nth-last-of-type */
+#test2 > p:nth-last-of-type(odd){
+    background-color: red;
+}
+
+
+/* 부정선택자 */
+/* #test3의 자식 li요소들 중 3의 배수를 제외한 나머지 요소만 선택 */
+#test3 >li:nth-of-type(3n){
+    background-color: pink;
+}
+
+
+#test3 >li:not(li:nth-of-type(3n)){
+    background-color: hotpink;
+}

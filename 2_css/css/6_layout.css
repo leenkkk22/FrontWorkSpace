@@ -1,0 +1,109 @@
+.area1{background-color: red;}
+.area2{background-color: orange;}
+.area3{background-color: yellow;}
+.area4{background-color: green;}
+.area5{background-color: blue;}
+
+.block {
+    border: 2 solid black;
+    width: 110px;
+    height: 150px;
+    
+
+    display: block;
+}
+
+.inline{
+    display: inline;
+}
+
+.inline-block{
+    background-color: red;
+    display: inline-block;
+}
+
+#container-1{
+    border:  3px solid black;
+    width: 300px;
+    height: 700px;
+}
+
+
+.de1{
+    background-color: red;
+    width: 100%;
+    height: 30%;    
+}
+.de2{
+    background-color: blue;
+    width: 100%;
+    height: 70%;
+}
+
+
+#ct-1{
+    border: 3px solid black;
+    width: 300px;
+    height: 600px;
+}
+
+.dm1{
+    background-color: greenyellow;
+    width: 100%;
+    height: 20%;
+}
+
+.dm2{
+    background-color: crimson;
+    width: 100%;
+    height: 30%;
+    
+}
+
+.dm3{
+    background-color: skyblue;
+    width: 100%;
+    height: 50%;
+}
+
+.b{
+    display: inline;
+}
+
+#new{
+    border: 5px solid red;
+    width: 400px;
+    height: 200px;
+    
+    display: inline-block;
+}
+
+#new>:first-child{
+    background-color: hotpink;
+    width: 50%;
+    height: 100%;
+     display: inline-block;
+}
+
+#new>:last-child{
+    background-color: navy;
+    width: 50%;
+    height: 100%;
+     display: inline-block;
+    
+}
+
+.div-4{
+    border: 3px solid black;
+
+}
+
+#test4{
+    background-color: deeppink;
+    /* display: none; */
+    /* 요소는 존재하지만 화면에 보이지 않는다.
+        + 영역도 차지하지 않는다. */
+
+    opacity: 1; /*요소의 가시성(불투명도)를 관리하는 속성*/
+    visibility: hidden; /*요소의 투명도를 0으로 만드는 속성*/
+}

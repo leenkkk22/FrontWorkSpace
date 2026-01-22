@@ -1,0 +1,62 @@
+#container1 div[id~=container1]{
+    background-color: yellow;
+}
+
+
+#container2 {
+    color: red;
+}
+div >pre:not(p){
+    color: pink;
+}
+
+
+#container3 input:not([type~=submit]){
+    border: 1px solid blue;
+}
+
+#container4 [class*=title]{
+    color: green;
+    font-size: 20px;
+}
+
+div[class|=user]{
+    background-color: lightgray;
+}
+div[class$=info]{
+    color: red;
+}
+
+div[class*=product]{
+    background-color: coral;
+}
+
+div[class^=admin]{
+    background-color: greenyellow;
+}
+
+
+#container6 :active{
+    background-color: yellow;
+}
+
+#container6:hover{
+    background-color: green;
+}
+
+
+#container7 li:nth-of-type(2){
+    font-weight: bold;
+}
+
+.container8 p:only-of-type{
+    color: blue
+}
+
+#container9 [title^=important]{
+    background-color: red;
+}
+
+#menu li.active{
+    color: red;
+}

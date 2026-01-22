@@ -135,3 +135,10 @@ input:focus{
 }
 
 
+button:enabled{
+    background-color: pink;
+}
+button:disabled{
+    background-color: whitesmoke;
+}
+
