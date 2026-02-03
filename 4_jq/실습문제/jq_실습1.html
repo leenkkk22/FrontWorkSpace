@@ -11,20 +11,16 @@
 <body>
 
     <pre>
-[Event1번은 내가 선택한 select박스의 값이 
-우측에 출력되어야합니다.]
+[Event1번은 내가 선택한 select박스의 값이 우측에 출력되어야합니다.] 
 
 [Event2번은 제목행을 제외한 1,2,3번행 클릭시 
 선택한 행의 정보가 하단에 출력되어야합니다.]
 
-[Event3번은 2번과 동일하나 선택한 
-행의 css만 변경되어야 합니다]
+[Event3번은 2번과 동일하나 선택한 행의 css만 
+변경되어야 합니다]
     </pre>
     <h2>Event 1</h2>
-    <script>
-        
-    </script>
-    
+  
     <select name="number">
         <option value="">== 선택 == </option>
         <option value="1">1번</option>
@@ -32,62 +28,101 @@
         <option value="3">3번</option>
         <option value="4">4번</option>
     </select>
-
-    <label id="result"></label>
-    <script>
-        // 현재 선택된 옵션값을 result에 출력
-        $("select[name=number]").change(function(){
-            console.log($("option:selected").val());
-            console.log($(this).val());
-
-            $("#result").html($(this).val());
-        })
-    </script>
-
-
-
-
     <span id="selNum"></span>
+<script>
+    $(function() {
+    $("select[name='number']").on("change", function() {
+        var selectedText = $(this).find("option:selected").text();
+        $("#selNum").text(selectedText);
+    });
+/*
+    // 선생님 코드
+     $(function() {
+    $("select[name='number']").on("change", function() {
+        if(!$(this).val()) return;
+        var selected = $("select[name=number] option:selected").text();
+        $("#selNum").text(selectedText)
+     });
+*/
 
+});
+
+</script>
     <hr>
 
     <h2>Event 2</h2>
-    <script>
-    
-    </script>
-    
+   
     <table id="event2" border="1">
-        <tr><th>번호</th><th id="title">제목</th><th>조회수</th><th>작성일자</th></tr>
-        <tr><td>3</td><td id="title">3번제목</td><td>0</td><td>11-07-13</td></tr>
-        <tr><td>2</td><td id="title">2번제목</td><td>0</td><td>11-07-12</td></tr>
-        <tr><td>1</td><td id="title">1번제목</td><td>0</td><td>11-07-11</td></tr>
+        <tr><th>번호</th><th>제목</th><th>조회수</th><th>작성일자</th></tr>
+        <tr><td>3</td><td>3번제목</td><td>0</td><td>11-07-13</td></tr>
+        <tr><td>2</td><td>2번제목</td><td>0</td><td>11-07-12</td></tr>
+        <tr><td>1</td><td>1번제목</td><td>0</td><td>11-07-11</td></tr>
     </table>
         선택된 행 :
         <span id="s1"></span> / 
         <span id="s2"></span> / 
         <span id="s3"></span> / 
         <span id="s4"></span>
+
+
+        <script>
+            $(function() {
+
+    $("#event2 tr:gt(0)").on("click", function() {
+        var td = $(this).children();
         
-    <script>
-        $("#event2").on("click", function(){
-             
-            
-            
-            $("#s1").prepend("#event2>nth-to-child(1)");
-            $("#s2").prepend("2");
-            $("#s3").prepend("3");
-            $("#s4").prepend("4");
+        $("#s1").text(td.eq(0).text());
+        $("#s2").text(td.eq(1).text());
+        $("#s3").text(td.eq(2).text());
+        $("#s4").text(td.eq(3).text());
+    });
+    /*
+        //선생님 코드
+        $("#event2  tr").not(":first").on("click",fuction(e)){
+         var $tds = $(this).children();
 
-        })
-    </script>
-
-
+         $tds.each(function(index, td)){
+            $("#s"+(index+1).text($(td).text());
+         });
+        });
+    */
+});
+        </script>
     <hr>
     
     <h2>Event 3</h2>
-    <script>
-    
+ <script>
+        $(function(){
+            $("#event3 tr").not(":first").on("click",function(e){
+                var $tds = $(this).children();
+                $(this).siblings().css('background','');
+                $(this).css('background','red');
+
+                $tds.each(function(index, td){
+                    $("#s"+(index+5)).text( $(td).text() );
+                })
+            });
+        })
     </script>
+
+<SCript>
+    // $("#event3 tr:gt(0)").on("click", function() {
+    //     $("#event3 tr").css("background-color", ""); 
+    //     $("#event3 tr").css("color", "");
+    //     $(this).css({
+    //         "background-color": "red",
+    //         "color": "white"
+    //     });
+
+    //     var td = $(this).children();
+    //     $("#s5").text(td.eq(0).text());
+    //     $("#s6").text(td.eq(1).text());
+    //     $("#s7").text(td.eq(2).text());
+    //     $("#s8").text(td.eq(3).text());
+    // });
+
+
+</SCript>
 
     <table id="event3" border="1">
         <tr><th>번호</th><th>제목</th><th>조회수</th><th>작성일자</th></tr>
