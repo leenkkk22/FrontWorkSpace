@@ -1,0 +1,69 @@
+fieldset{
+    width: 800px;
+    height: 260px;
+    
+}
+
+input[type="text"], textarea{
+    width: 300px; 
+      
+}
+
+input [type="content"], textarea{
+    width: 300px;
+    height: 150px;
+    resize: none;
+}
+
+.btn-area {
+    padding-left: 170px;
+    
+}
+
+.list-table{
+    width: 1000px;
+    border: 2px solid;
+}
+
+.list-table{
+    width: 822px;
+    border: 2px solid;
+}
+.list-table th, .list-table td{
+    height: 40px;
+    border: 1px solid;
+    
+}
+.list-table td{
+    height: 20px;
+}
+
+.list-table thead th{
+    background-color: #ffa575;
+    color: white;
+}
+.title-cell {
+    width: 360px;
+    text-align: left;
+
+}
+
+
+.list-table tbody td{
+    background-color: #f9fcb06b;
+}
+
+.list-table tfoot td{
+    background-color: #ffa575;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.go-btn {
+
+    width: 100%;
+    height: 25px;
+
+
+}
